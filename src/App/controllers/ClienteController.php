@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\controllers\Conexao;
 
 use App\Models\Cliente;
 
@@ -16,6 +17,7 @@ class ClienteController
     }
 
     private function __construct(){
+        $conexao=Conexao::$instance::getInstance();
     }
 
     public function inserir(Cliente $cliente){

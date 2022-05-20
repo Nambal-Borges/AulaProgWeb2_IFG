@@ -7,6 +7,7 @@ use App\Controllers\UsuarioController;
 <!doctype html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,21 +16,17 @@ use App\Controllers\UsuarioController;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
 
-<nav>
-    <div class="nav-wrapper cyan">
-        <a href="#" class="brand-logo">Cadastro de Cliente</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Cadastro de Cliente</a></li>
-            <li><a href="#">Cadastro de Produto</a></li>
-            <li><a href="#">Vendas</a></li>
-        </ul>
-    </div>
-</nav>
+<?php
+    include_once "menu.php";
+
+?>
 <div class="container">
+    <br><br><br><br>
     <div class="row">
         <?php
 
@@ -42,12 +39,14 @@ use App\Controllers\UsuarioController;
 
 
         ?>
+
         <table class="table table-hover">
             <thead class="center">
                 <tr>
                     <th>Nome</th>
                     <th>Email</th>
-                    <th>-</th>
+                    <th>Telefone</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -57,6 +56,7 @@ use App\Controllers\UsuarioController;
                             <th>".$usuario->getNome()."</th>
                             <th>".$usuario->getEmail()."</th>
                             <th>".$usuario->getTelefone()."</th>
+                            
                         </tr>";
                 }
 

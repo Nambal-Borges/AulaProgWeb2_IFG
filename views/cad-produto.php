@@ -33,14 +33,14 @@ include_once "menu.php";
         $sucesso = false;
         if (isset($_POST['enviar'])){
 
-            $usuario = new Usuario();
-            $usuario->setNome($_POST['nome']);
-            $usuario->setTelefone($_POST['telefone']);
-            $usuario->setEmail($_POST['email']);
-            $usuario->setSenha(md5($_POST['senha']));
+            $produto = new Produto();
+            $produto->setNome($_POST['nome']);
+            $produto->setDescricao($_POST['descricao']);
+            $produto->setValor($_POST['valor']);
+            $produto->setImagem($_POST['imagem']);
 
 
-            if (UsuarioController::getInstance()->inserir($usuario)){
+            if (ProdutoController::getInstance()->inserir($produto)){
                 $sucesso = true;
             }
 
